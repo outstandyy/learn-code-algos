@@ -14,6 +14,7 @@
  *
  */
 
+export {};
 
 /**
  * 1. bruteforce
@@ -21,7 +22,7 @@
  * time complexity: O(N*K)
  *
  */
-function maxSumSubarrayOfSize1(arr: number[], k: number): number {
+function go1(arr: number[], k: number): number {
   let maxSum: number = 0;
   for (let i = 0; i < arr.length - k; i++) {
     let currentSum: number = 0;
@@ -34,15 +35,18 @@ function maxSumSubarrayOfSize1(arr: number[], k: number): number {
 }
 
 // test
-console.log(maxSumSubarrayOfSize1([2, 1, 5, 1, 3, 2], 3));
-console.log(maxSumSubarrayOfSize1([2, 3, 4, 1, 5], 2));
+console.log(go1([2, 1, 5, 1, 3, 2], 3));
+console.log(go1([2, 3, 4, 1, 5], 2));
 
 
 /**
  * 2. better approach: use sliding window
  *
+ * time complexity: O(N)
+ * space complexity: O(N)
+ *
  */
-function maxSumSubarrayOfSize2(arr: number[], k: number): number {
+function go2(arr: number[], k: number): number {
   let windowEnd: number = 0;
   let windowStart: number = 0;
   let currentSum = 0;
@@ -60,5 +64,5 @@ function maxSumSubarrayOfSize2(arr: number[], k: number): number {
 }
 
 // test
-console.log(maxSumSubarrayOfSize2([2, 1, 5, 1, 3, 2], 3));
-console.log(maxSumSubarrayOfSize2([2, 3, 4, 1, 5], 2));
+console.log(go2([2, 1, 5, 1, 3, 2], 3));
+console.log(go2([2, 3, 4, 1, 5], 2));
