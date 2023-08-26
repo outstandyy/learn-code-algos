@@ -44,6 +44,10 @@ class LinkedListNode {
   }
 }
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+ */
 function removeNthLastNode(head: LinkedListNode | null, n: number): void {
   let right = head,
       left = head;
