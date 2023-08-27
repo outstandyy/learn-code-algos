@@ -1,3 +1,9 @@
+/**
+ *
+ * Time complexity: O(n+n) = O(n)
+ * Space complexity: O(n)
+ */
+
 function reverseWords(sentence: string) {
   let chars: string[] = [...sentence.trim().replace(/  +/g, ' ')];
   let strLen: number = chars.length;

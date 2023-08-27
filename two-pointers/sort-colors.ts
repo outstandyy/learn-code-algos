@@ -2,7 +2,7 @@
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-function sortColors(colors) {
+function sortColors(colors: number[]) {
   let red = 0;
   let white = 0;
   let blue = colors.length - 1;
